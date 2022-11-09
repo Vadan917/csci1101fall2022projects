@@ -11,6 +11,7 @@ pygame.display.set_caption("Tank Domination")
 
 system_clock = pygame.time.Clock()
 
+<<<<<<< HEAD
 game_tank_svg = pygame.image.load("tank.svg")
 
 game_tank_sprite = pygame.transform.scale(game_tank_svg, (75, 75))
@@ -36,6 +37,11 @@ game_characteristics = {
             'x': 0.8 * monitor_display[0] - game_tank_sprite.get_width()
         },
         "hp": 1
+=======
+game_characteristics = {
+    "sky": {
+        "color": (135, 206, 235)
+>>>>>>> 48a403dd708fa8c4980bd0879dd2989d5a38d250
     }
 }
 
@@ -52,6 +58,7 @@ while game_running_flag:
 
         break
 
+<<<<<<< HEAD
     key_pressed = pygame.key.get_pressed()
 
     position_delta = 0
@@ -77,6 +84,10 @@ while game_running_flag:
     
     game_display.blit(game_tank_sprite_cpu, (game_characteristics["cpu"]["position"]['x'], game_characteristics["grass"]["position"]['y'] - game_tank_sprite_cpu.get_height()))
 
+=======
+    #Game Graphics
+    game_display.fill(game_characteristics["sky"]["color"])
+>>>>>>> 48a403dd708fa8c4980bd0879dd2989d5a38d250
     # Render game frame-by-frame.
     pygame.display.update()
 
